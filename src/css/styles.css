@@ -1,18 +1,117 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#search-form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+
+.search-input {
+  font-family: inherit;
+  display: block;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  line-height: 1.5;
+  width: 272px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #808080;
+  transition: border-color 250ms linear, color 250ms linear;
+}
+
+.search-input:hover {
+  border-color: #000000;
+}
+
+.search-input:focus {
+  border-color: #4e75ff;
+  color: #2e2f42;
+}
+
+button {
+  font-family: inherit;
+  display: block;
+  border: none;
+  outline: transparent;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-left: 156px;
+  padding-right: 156px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.gallery > li {
+  border: 1px solid #808080;
+}
+
+.gallery img {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.01);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 25px 4px 20px;
+}
+
+.info span {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info li {
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.js-load-more-btn {
+  margin: 0 auto 44px auto;
+}
+
+.js-load-more-btn.hidden {
+  display: none;
+}
